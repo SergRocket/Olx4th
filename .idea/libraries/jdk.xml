@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jdk">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://C:/Program Files/Java/jdk-13/lib/src.zip!/jdk.javadoc" />
+    </SOURCES>
+  </library>
+</component>
