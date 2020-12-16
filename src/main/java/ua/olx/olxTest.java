@@ -1,30 +1,25 @@
 package ua.olx;
 
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
+import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import javax.swing.*;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class olxTest {
-    WebDriver webDriver = new ChromeDriver();
-    MainPage mainPage;
+    public WebDriver webDriver = new ChromeDriver();
+
     @Before
     public void PrepeareTest() {
 
-        mainPage = new MainPage (webDriver);
-        mainPage.SwitchToelement();
+        //mainPage.SwitchToelement();
         // Telling the system where to find the Chrome driver
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver86.exe");
 
     }
 
@@ -37,9 +32,10 @@ public class olxTest {
         webDriver.findElement(By.id("my-account-link")).click();// click on the account button
         Thread.sleep(3000);
         webDriver.findElement(By.id("userEmail")).sendKeys("rockettester3107@gmail.com");
+
         //writing in the email field
         Thread.sleep(1500);
-        webDriver.findElement(By.id("userPass")).sendKeys("qwe123321Q", Keys.ENTER);
+       /* webDriver.findElement(By.id("userPass")).sendKeys("qwe123321Q", Keys.ENTER);
         //writing in the password field
         Thread.sleep(4000);
         webDriver.findElement(By.id("headerLogo")).click();//find the button to go to the main page
@@ -73,7 +69,7 @@ public class olxTest {
         Thread.sleep(500);
         actions.moveToElement(myProfile).build().perform();//hover over the My profile
         Thread.sleep(1000);
-        webDriver.findElement(By.className("last")).click();//logout click
+        webDriver.findElement(By.className("last")).click();//logout click*/
 
     }
     @After
